@@ -64,7 +64,7 @@ describe('Mini projet API Cypress - QACart Todo', () => {
 
       cy.log(' Tâche créée : ' + taskId)
       cy.log(' Vérifie dans l’UI puis clique Resume')
-
+        // Je mets une pause pour que tu puisses vérifier manuellement dans l’interface que la tâche a bien été créée avant de continuer les tests suivants.
       cy.pause()
     })
   })
@@ -98,7 +98,7 @@ describe('Mini projet API Cypress - QACart Todo', () => {
 
       cy.log(' Tâche modifiée')
       cy.log(' Vérifie dans l’UI puis clique Resume')
-
+        // Je mets une pause pour que tu puisses vérifier manuellement dans l’interface que la tâche a bien été modifiée avant de continuer les tests suivants.
       cy.pause()
     })
   })
@@ -121,7 +121,6 @@ describe('Mini projet API Cypress - QACart Todo', () => {
       cy.log(' Tâche supprimée')
       cy.log(' Vérifie dans l’UI puis clique Resume')
 
-      cy.pause()
     })
   })
 
