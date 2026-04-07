@@ -1,14 +1,14 @@
 describe('Mini projet API Cypress - QACart Todo', () => {
 
-  // ---------
+
   // VARIABLES GLOBALES
-  // ---------
+
   let token
   let taskId
 
-  // ---------
+
   // AUTHENTIFICATION
-  // ---------
+
   before(() => {
     cy.request({
       method: 'POST',
@@ -32,12 +32,11 @@ describe('Mini projet API Cypress - QACart Todo', () => {
     })
   })
 
-  // ---------
-  // TEST 1 : CREATION
+
+ // TEST 1 : CREATION
   // POST permet de créer une nouvelle ressource côté serveur.
-  // Contrairement à GET, il modifie l'état du système.
-  // Le serveur génère l'identifiant unique de la ressource créée.
-  // ---------
+
+
   it('Créer une tâche', () => {
     cy.request({
       method: 'POST',
@@ -69,13 +68,12 @@ describe('Mini projet API Cypress - QACart Todo', () => {
     })
   })
 
-  // ---------
+   
   // TEST 2 : MODIFICATION
   // PUT permet de mettre à jour complètement une ressource existante.
-  // Il est idempotent : envoyer plusieurs fois la même requête
-  // produit le même résultat.
+
   // La ressource est identifiée via son ID dans l'URL.
-  // ---------
+   
   it('Modifier la tâche', () => {
     cy.request({
       method: 'PUT',
@@ -103,9 +101,9 @@ describe('Mini projet API Cypress - QACart Todo', () => {
     })
   })
 
-  // ------------
+   
   // TEST 3 : SUPPRESSION
-  // ---------
+   
   it('Supprimer la tâche', () => {
     cy.request({
       method: 'DELETE',
